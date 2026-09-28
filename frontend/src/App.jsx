@@ -22,6 +22,8 @@ import SellerProducts from "./pages/seller/SellerProducts";
 import SellerOrders from "./pages/seller/SellerOrders";
 import InventoryOverview from "./pages/seller/InventoryOverview";
 import SalesPerformance from "./pages/seller/SalesPerformance";
+import SellerEditProduct from "./pages/seller/SellerEditProduct";
+import SellerInventoryProduct from "./pages/seller/SellerInventoryProduct";
 
 // Buyer
 import BuyerDashboard from "./pages/buyer/BuyerDashboard";
@@ -78,6 +80,16 @@ function App() {
         <Route
           path="/seller/products"
           element={<SellerProducts />}
+        />
+
+        <Route
+          path="/seller/products/:productId/edit"
+          element={<SellerEditProduct />}
+        />
+
+        <Route
+          path="/seller/products/:productId/inventory"
+          element={<SellerInventoryProduct />}
         />
 
         <Route
